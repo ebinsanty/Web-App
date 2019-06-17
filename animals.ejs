@@ -1,0 +1,12 @@
+<h1>The animals are here</h1>
+
+<% ani.forEach(function(ani){ %>
+   <div>
+       <h2><%= ani.name %></h2>
+       <img src=" <%= ani.image %>">
+   </div>
+<% }); %>
+
+
+//note
+//the name inside function should be the object
