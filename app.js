@@ -2,7 +2,8 @@ var express=require("express");
 var app=express();
 var bodyParser=require("body-parser");
 var mongoose=require("mongoose");
-app.use(bodyParser.urlencoded({extended:true}));//usually copy pste line used
+app.use(bodyParser.urlencoded({extended:true}));//usually copy pste line 
+mongoose.connect("mongodb://localhost/yelp_camp");
 
 app.set("view engine","ejs");//required for render (no need of .ejs)
 var animals = [
