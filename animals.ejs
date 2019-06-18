@@ -1,12 +1,32 @@
-<h1>The animals are here</h1>
+<% include partials/header %>
+<div class="container">
 
-<% ani.forEach(function(ani){ %>
-   <div>
-       <h2><%= ani.name %></h2>
-       <img src=" <%= ani.image %>">
+  <header class="jumbotron">
+   <div class="continer">
+    <h1>The Beasts</h1>
+    <p>The best ones are to be found here</p>
+    <p>
+    <a class="btn btn-primary btn-large" href="/animals/new">ADD MORE ANIMALS</a> 
+    </p>
    </div>
-<% }); %>
+  </header>
+  
+ <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+  <% ani.forEach(function(ani){ %>
+  
+       
+       <div class="thumbnail">
+         <img src=" <%= ani.image %>">
+         <div class="caption">
+           <h2><%= ani.name %></h2>
+         </div>
+       </div>
+  
+  <% }); %>
+ </div>
 
 
-//note
-//the name inside function should be the object
+</div>
+
+<% include partials/footer %>
+
