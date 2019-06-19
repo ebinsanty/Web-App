@@ -1,0 +1,35 @@
+<% include partials/header %>
+<div class="container">
+
+  <header class="jumbotron">
+   <div class="continer">
+    <h1>The Beasts</h1>
+    <p>The best ones are to be found here</p>
+    <p>
+    <a class="btn btn-primary btn-large" href="/animals/new">ADD MORE ANIMALS</a> 
+    </p>
+   </div>
+  </header>
+  
+ <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+  <% ani.forEach(function(ani){ %>
+  
+       
+       <div class="thumbnail">
+         <img src=" <%= ani.image %>">
+         <div class="caption">
+           <h2><%= ani.name %></h2>
+         </div>
+         <p>
+           <a href="/animals/<%= ani._id%>" class="btn btn-primary" >MORE INFO</a>
+         </p>
+       </div>
+  
+  <% }); %>
+ </div>
+
+
+</div>
+
+<% include partials/footer %>
+
